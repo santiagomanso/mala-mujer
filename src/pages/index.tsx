@@ -6,35 +6,29 @@ import bg from '../assets/background_take2.png'
 export default function Home() {
   return (
     <main className='scroll-smooth'>
-      <section id='home' className='h-screen flex justify-center items-center'>
-        <Image
-          src={bg}
-          alt='Background'
-          layout='fill'
-          objectFit='cover'
-          priority
-        />
+      <section
+        id='home'
+        className='h-screen flex justify-center items-center mainBackground'
+      >
         <article className='w-3/4 h-3/4 flex flex-col gap-40'>
           <nav className='flex justify-between'>
-            <a href='#home' className='text-2xl'>
+            <a href='#home' className='text-2xl font-aleoLight'>
               Est. 2023
             </a>
-            <div className='flex gap-2 text-2xl'>
+            <div className='flex gap-2 text-2xl font-aleoLight'>
               <p>english //</p>
               <p>español //</p>
               <p>deutsch</p>
             </div>
           </nav>
           <div className='relative'>
-            <h1 className='capitalize font-bold text-[10rem] -ml-3'>
+            <h1 className='capitalize font-bold text-[10rem] -ml-3 font-gwenTrialBlack'>
               mala mujer
             </h1>
-            <p className='w-2/3 text-2xl'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            <p className='w-2/3 text-2xl font-aleoLight'>
+              graphic design // art direction // ux/ui // motion graphics // 3D
             </p>
-            <button className='px-3 py-2 border-2 border-gray-400 rounded-lg mt-5'>
-              Lorem
-            </button>
+            <button className='burger'></button>
             <Image
               src={imgVertical}
               alt='flower'
