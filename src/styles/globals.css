@@ -2,6 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'aleoLight';
+  src: url('../assets/TTF/aleo-light-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gwenTrialBlack';
+  src: url('../assets/TTF/Gwen-Trial-Black.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+.mainBackground {
+  background: rgb(47, 223, 122);
+  background: linear-gradient(
+    153deg,
+    rgba(47, 223, 122, 1) 0%,
+    rgba(197, 255, 221, 1) 29%,
+    rgba(252, 255, 254, 1) 43%,
+    rgba(250, 255, 252, 1) 66%,
+    rgba(197, 255, 221, 1) 74%,
+    rgba(16, 125, 61, 1) 97%
+  );
+}
+
+.burger:before,
+.burger:after {
+  content: '';
+  width: 15px;
+  height: 2px;
+  position: absolute;
+  background: #1a1a1a;
+  transition: all 250ms ease-out;
+  will-change: transform;
+}
+
+.burger:before {
+  transform: translateY(-3px);
+}
+
+.burger:after {
+  transform: translateY(3px);
+}
+
+.active.burger:before {
+  transform: translateY(0) rotate(45deg);
+}
+
+.active.burger:after {
+  transform: translateY(0) rotate(-45deg);
 }
