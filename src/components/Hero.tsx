@@ -13,7 +13,7 @@ const Hero = (props: Props) => {
       <p className='w-2/3 text-2xl font-aleoLight'>
         graphic design // art direction // ux/ui // motion graphics // 3D
       </p>
-      <button className='burger'></button>
+
       <Image
         src={imgVertical}
         alt='flower'

@@ -36,7 +36,7 @@ html {
 .burger:before,
 .burger:after {
   content: '';
-  width: 15px;
+  width: 35px;
   height: 2px;
   position: absolute;
   background: #1a1a1a;
@@ -45,7 +45,7 @@ html {
 }
 
 .burger:before {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
 }
 
 .burger:after {
