@@ -1,6 +1,8 @@
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
 import About from '@/components/About'
+import Branding from '@/components/Branding'
+import Footer from '@/components/Footer'
 
 export default function Home() {
   return (
@@ -20,9 +22,11 @@ export default function Home() {
           </a>
         </article>
       </section>
-      <section id='about' className='h-screen flex flex-col'>
-        <About />
-      </section>
+
+      <About />
+
+      <Branding />
+      <Footer />
     </main>
   )
 }

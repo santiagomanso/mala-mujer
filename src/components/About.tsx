@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 
-import splash from '../assets/splash.png'
 import { members } from '@/data/members'
+import { Button } from './ui/button'
 
 type Props = {}
 
@@ -21,9 +21,9 @@ const About = (props: Props) => {
   }
 
   return (
-    <>
+    <section id='about' className='h-screen w-full flex flex-col'>
       <article className='relative h-1/3 gap-5 flex justify-center items-center'>
-        <Image alt='splash' src={splash} />
+        {/* <Image alt='splash' src={splash} /> */}
         <div className='flex flex-col h-1/2 justify-start gap-10'>
           <p className='text-3xl font-aleoLight font-semibold'>
             whatwecandoforyou//
@@ -40,7 +40,7 @@ const About = (props: Props) => {
       </article>
       <article className='h-2/3 relative overflow-hidden'>
         <div className='flex gap-2 ml-32 mb-20 items-center '>
-          <Image alt='splash' src={splash} className='w-[50px] h-[50px]' />
+          {/* <Image alt='splash' src={splash} className='w-[50px] h-[50px]' /> */}
           <p className='text-3xl font-aleoLight font-semibold'>theteam//</p>
         </div>
         <div className='grid grid-cols-2 md:grid-cols-5 px-28 gap-20 mt-10   font-aleoLight'>
@@ -50,12 +50,12 @@ const About = (props: Props) => {
                 <article
                   key={item.id}
                   onClick={() => toggleActive(item.id)}
-                  className='relative w-full h-full group'
+                  className='relative h-[100px] w-full group hover:cursor-pointer'
                 >
                   <Image
                     alt={item.name}
                     src={item.image}
-                    className='rounded-2xl w-full h-1/3 object-top object-cover group-hover:outline-8 group-hover:cursor-pointer group-hover:outline group-hover:outline-pink-300'
+                    className='rounded-2xl w-full h-[250px] object-top object-cover group-hover:outline-8 group-hover:cursor-pointer group-hover:outline group-hover:outline-pink-300'
                   />
                   <h3 className='text-lg mt-2'>{item.name}</h3>
                   <h2 className='text-2xl font-black mb-3'>{item.title}</h2>
@@ -77,7 +77,7 @@ const About = (props: Props) => {
           from//the//roots//to//the//seed//to//the//branch//to//the//flower//to//the//dirt//to//the//leaf
         </p>
       </article>
-    </>
+    </section>
   )
 }
 
