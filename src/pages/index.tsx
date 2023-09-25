@@ -1,5 +1,4 @@
-import Navbar from '@/components/Navbar'
-import Hero from '@/components/Hero'
+import Intro from '@/components/Intro'
 import About from '@/components/About'
 import Branding from '@/components/Branding'
 import Footer from '@/components/Footer'
@@ -7,24 +6,8 @@ import Footer from '@/components/Footer'
 export default function Home() {
   return (
     <main className='scroll-smooth'>
-      <section
-        id='home'
-        className='h-screen flex justify-center items-center mainBackground'
-      >
-        <article className='w-3/4 h-3/4 flex flex-col gap-40'>
-          <Navbar />
-          <Hero />
-          <a
-            href='#about'
-            className='font-aleoLight absolute bottom-8 right-1/2 translate-x-1/2 text-2xl'
-          >
-            scroll down
-          </a>
-        </article>
-      </section>
-
+      <Intro />
       <About />
-
       <Branding />
       <Footer />
     </main>
