@@ -1,7 +1,11 @@
 import { StaticImageData } from 'next/image'
+import ovelia from '../assets/ovelia.png'
+import rick from '../assets/rick.png'
+import roxana from '../assets/roxanna.png'
+import emma from '../assets/emma.png'
 import santi from '../assets/santi.jpg'
 
-interface member {
+export interface Member {
   id: number
   title: string
   name: string
@@ -9,36 +13,36 @@ interface member {
   image: StaticImageData
 }
 
-type membersArray = member[]
+type MembersArray = Member[]
 
-export const members: membersArray = [
+export const members: MembersArray = [
   {
     id: 1,
     name: 'ovelia',
     title: 'graphic design',
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis fugit siculpa doloremque ratione nihil doloribus quas cum obcaecati necessitatibu.',
-    image: santi,
+    image: ovelia,
   },
   {
     id: 2,
     name: 'rick',
     title: 'business',
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis fugit siculpa doloremque ratione nihil doloribus quas cum obcaecati necessitatibu.',
-    image: santi,
+    image: rick,
   },
   {
     id: 3,
-    name: 'emma',
+    name: 'roxana',
     title: 'ux/ui',
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis fugit siculpa doloremque ratione nihil doloribus quas cum obcaecati necessitatibu.',
-    image: santi,
+    image: roxana,
   },
   {
     id: 4,
-    name: 'roxanna',
+    name: 'emma',
     title: 'motion graphics',
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis fugit siculpa doloremque ratione nihil doloribus quas cum obcaecati necessitatibu.',
-    image: santi,
+    image: emma,
   },
   {
     id: 5,
