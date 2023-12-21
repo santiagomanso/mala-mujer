@@ -7,8 +7,8 @@ type Props = {}
 
 const Intro = (props: Props) => {
   return (
-    <div className='relative h-screen flex flex-col items-center justify-center mainBackground overflow-hidden'>
-      <div className='relative w-full  max-w-[110rem] h-[90%]'>
+    <div className='relative h-screen flex flex-col items-center justify-center mainBackground overflow-hidden '>
+      <div className='relative w-full  lg:max-w-[110rem] xl:max-w-[100rem] h-[90%]'>
         <Navbar />
         <article className='flex flex-col mt-28 items-start w-full h-full'>
           <h1 className='capitalize font-extrabold text-[8rem]  font-gwenTrialBlack'>

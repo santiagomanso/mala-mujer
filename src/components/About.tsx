@@ -1,25 +1,9 @@
-import React, { useState } from 'react'
-import Image from 'next/image'
+import React from 'react'
 
 import { members } from '@/data/members'
-import { Button } from './ui/button'
+import Card from './Card'
 
-type Props = {}
-
-const About = (props: Props) => {
-  // Initialize an array of active states for each card
-  const [activeStates, setActiveStates] = useState<boolean[]>(
-    members.map(() => false),
-  )
-
-  // Function to toggle the active state of a specific card
-  function toggleActive(index: number) {
-    const newActiveStates = activeStates.map((_, i) =>
-      i === index ? !activeStates[i] : false,
-    )
-    setActiveStates(newActiveStates)
-  }
-
+const About = () => {
   return (
     <section id='about' className='h-screen w-full flex flex-col'>
       <article className='relative h-1/3 gap-5 flex justify-center items-center'>
@@ -46,31 +30,7 @@ const About = (props: Props) => {
         <div className='grid grid-cols-2 md:grid-cols-5 px-28 gap-20 mt-10   font-aleoLight'>
           {members &&
             members.map((item) => {
-              return (
-                <article
-                  key={item.id}
-                  onClick={() => toggleActive(item.id)}
-                  className='relative h-[100px] w-full group hover:cursor-pointer'
-                >
-                  <Image
-                    alt={item.name}
-                    src={item.image}
-                    className='rounded-2xl w-full h-[250px] object-top object-cover group-hover:outline-8 group-hover:cursor-pointer group-hover:outline group-hover:outline-pink-300'
-                  />
-                  <h3 className='text-lg mt-2'>{item.name}</h3>
-                  <h2 className='text-2xl font-black mb-3'>{item.title}</h2>
-                  <p
-                    className={`text-sm
-                  ${
-                    activeStates[item.id]
-                      ? 'scale-100 transition-all duration-100'
-                      : 'scale-0'
-                  }`}
-                  >
-                    {item.desc}
-                  </p>
-                </article>
-              )
+              return <Card item={item} key={item.id} />
             })}
         </div>
         <p className='font-aleoLight font-semibold text-4xl text-pink-300 text-center absolute bottom-5 tracking-widest'>
